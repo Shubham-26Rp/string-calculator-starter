@@ -6,11 +6,59 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
 
-    @Test
-    void empty_string_should_return_0() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(1, stringCalculator.add(""));
-    }
+
+	StringCalculator stringcalculator = new StringCalculator();
+
+	@Test
+	public void returnZeroOnEmptyString()
+	{
+		assertEquals(0, stringcalculator.add(""));
+	}
+	
+	@Test
+	public void returnNumOnSingleArg()
+	{
+		assertEquals(1, stringcalculator.add("1"));
+	}
+	
+	@Test
+	public void returnSumOnTwoArgsDelimitedByComma()
+	{
+		assertEquals(3, stringcalculator.add("1,2"));
+	}
+	
+	@Test
+	public void returnSumOnMultipleArgsDelimitedByComma()
+	{
+		assertEquals(6, stringcalculator.add("1,2,3"));
+	}
+
+	@Test
+	public void acceptNewlineAsValidDelimiter()
+	{
+		assertEquals(6, stringcalculator.add("1\n2,3"));
+	}
+	
+	@Test
+	public void customDelimeter()
+	{
+		assertEquals(3, stringcalculator.add("//;\n1;2"));
+	}
+	
+	@Test
+	public void raiseExceptionOnNegativeNumbers()
+	{
+		try {
+			stringcalculator.add("-1,-2,3");
+			fail("Exception expected.");
+		}
+		
+		catch(RuntimeException e)
+		{
+			assertEquals("Negatives not allowed: [-1, -2]", e.getMessage());
+		}
+	}
+	
 
    
 }
