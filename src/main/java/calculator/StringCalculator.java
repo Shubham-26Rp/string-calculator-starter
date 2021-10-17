@@ -112,5 +112,8 @@ class StringCalculator {
 		String[] nums = str.split(",|\n");
 		return nums;
 	}
-
+    public static int getCallCount()
+	{
+		return count;
+	}
 }
