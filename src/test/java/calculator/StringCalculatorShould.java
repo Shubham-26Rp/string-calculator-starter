@@ -58,29 +58,29 @@ class StringCalculatorShould {
 			assertEquals("Negatives not allowed: [-1, -2]", e.getMessage());
 		}
 	}
-	
-	  @Test
+
+	 @Test
 		public void validateCallCount()
 		{
 			assertEquals(StringCalculator.getCallCount(), StringCalculator.count);
 		}
 	  
-	    @Test
+	 @Test
 		public void ignoreNumsGrtThn1000()
 		{
 			assertEquals(2, stringcalculator.add("2,1001"));
 		}
-	    @Test
+	 @Test
 		public void validateAnyLengthDelimeter()
 		{
 			assertEquals(6, stringcalculator.add("//[***]\n1***2***3"));
 		}
 	    
-	    @Test
-		public void multipleDelimeter()
-		{
-			assertEquals(6, stringcalculator.add("//[*][%]\n1*2%3"));
-		}
+	  @Test
+			public void multipleDelimeter()
+			{
+				assertEquals(6, stringcalculator.add("//[*][%]\n1*2%3"));
+			}
 	    @Test
 		public void mulCustomDelWithAnyLength()
 		{
