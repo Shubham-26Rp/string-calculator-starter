@@ -70,4 +70,15 @@ class StringCalculatorShould {
 		{
 			assertEquals(2, stringcalculator.add("2,1001"));
 		}
+	    @Test
+		public void validateAnyLengthDelimeter()
+		{
+			assertEquals(6, stringcalculator.add("//[***]\n1***2***3"));
+		}
+	    
+	    @Test
+		public void multipleDelimeter()
+		{
+			assertEquals(6, stringcalculator.add("//[*][%]\n1*2%3"));
+		}
 }
