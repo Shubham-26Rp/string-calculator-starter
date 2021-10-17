@@ -35,7 +35,7 @@ class StringCalculatorShould {
 
 	@Test
 	public void customDelimeter() {
-		assertEquals(3, stringcalculator.add("//;\n1;2"));
+		assertEquals(4, stringcalculator.add("//;\n1;2"));
 	}
 
 	@Test
