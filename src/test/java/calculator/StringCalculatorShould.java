@@ -70,5 +70,8 @@ class StringCalculatorShould {
 		assertEquals(6, stringcalculator.add("//[*][%]\n1*2%3"));
 	}
 
-	
+	@Test
+	public void mulCustomDelWithAnyLength() {
+		assertEquals(6, stringcalculator.add("//[**][%%]\n1**2%%3"));
+	}
 }
