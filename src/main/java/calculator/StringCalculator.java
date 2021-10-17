@@ -54,21 +54,21 @@ class StringCalculator {
 	}
 	
     private static String[] tokenize(String str)
-	{
+   	{
 
-		if(str.startsWith("//"))
-		{
-			if(str.startsWith("//["))
-				return splitMulCustomDelWithAnyLength(str);
-			else
-				return splitCustomDelimeter(str);	
-		}
-		
-			else
-			{
-				return splitNewlineAndCommas(str);	
-			}
-	}
+   		if(str.startsWith("//"))
+   		{
+   			if(str.startsWith("//["))
+   				return splitMulCustomDelWithAnyLength(str);
+   			else
+   				return splitCustomDelimeter(str);	
+   		}
+   		
+   			else
+   			{
+   				return splitNewlineAndCommas(str);	
+   			}
+   	}
 		
     private static String[] splitMulCustomDelWithAnyLength(String str)
 	{
