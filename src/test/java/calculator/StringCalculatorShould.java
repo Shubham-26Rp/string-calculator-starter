@@ -8,10 +8,7 @@ class StringCalculatorShould {
 
 	StringCalculator stringcalculator = new StringCalculator();
     
-	@Test
-	public void returnSum() {
-		assertEquals(0, stringcalculator.sum("+,1,2,3"));
-	}
+	
 	
 	@Test
 	public void returnZeroOnEmptyString() {
@@ -78,5 +75,9 @@ class StringCalculatorShould {
 	@Test
 	public void mulCustomDelWithAnyLength() {
 		assertEquals(6, stringcalculator.add("//[**][%%]\n1**2%%3"));
+	}
+	@Test
+	public void returnSum() {
+		assertEquals(0, stringcalculator.sum("+,1,2,3"));
 	}
 }
