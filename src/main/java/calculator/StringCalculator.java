@@ -131,7 +131,7 @@ class StringCalculator {
     		int sum=0;
     		for(int i=2;i<strArray.length;i=i+2)
     		{
-    			sum=sum+Integer.parseInt((strArray[i])+1);
+    			sum=sum+Integer.parseInt(strArray[i])+1;
     		}
     	}   
 		return sum;

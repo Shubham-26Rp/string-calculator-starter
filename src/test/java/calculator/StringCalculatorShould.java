@@ -10,8 +10,9 @@ class StringCalculatorShould {
     
 	@Test
 	public void returnSum() {
-		assertEquals(+1,stringcalculator.sum());
+		assertEquals(9, stringcalculator.sum());
 	}
+	
 	@Test
 	public void returnZeroOnEmptyString() {
 		assertEquals(0, stringcalculator.add(""));
