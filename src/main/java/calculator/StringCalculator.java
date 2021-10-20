@@ -1,12 +1,13 @@
 package calculator;
 
+import java.util.Arrays;
 import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class StringCalculator {
 	static int count = 0;
-	
+	static int sum;
     public int add(String numbers) {
     	synchronized(this)
 		{
@@ -116,4 +117,26 @@ class StringCalculator {
 	{
 		return count;
 	}
+    
+    public static int sum()
+    {
+    	String s= "+,1,2,3";
+    	System.out.println(s);
+    	
+    	String[] strArray=s.split("");
+    	System.out.println(Arrays.toString(strArray));
+    	
+    	if(strArray[0]=="+")
+    	{
+    		int sum=0;
+    		for(int i=2;i<strArray.length;i=i+2)
+    		{
+    			sum=sum+Integer.parseInt((strArray[i])+1);
+    		}
+    	}   
+		return sum;
+    	
+    	
+    	
+    }
 }
