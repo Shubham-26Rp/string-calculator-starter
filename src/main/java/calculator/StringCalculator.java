@@ -118,23 +118,20 @@ class StringCalculator {
 		return count;
 	}
     
-    public static int sum(String s)
-    {
-    	
-    	System.out.println(s);
-    	
-    	String[] strArray=s.split("");
-    	System.out.println(Arrays.toString(strArray));
-    	
-    	if(strArray[0]=="+")
-    	{
-    		int sum=0;
-    		for(int i=2;i<strArray.length;i=i+2)
-    		{
-    			sum=sum+Integer.parseInt((strArray[i])+1);
-    		}
-    	}   
-		
+	public static int sum(String s) {
+
+		System.out.println(s);
+
+		String[] strArray = s.split("");
+		System.out.println(Arrays.toString(strArray));
+
+		if (strArray[0] == "+") {
+			int sum = 0;
+			for (int i = 2; i < strArray.length; i = i + 2) {
+				sum = sum + Integer.parseInt((strArray[i]) + 1);
+			}
+		}
+
 		return sum;
-    }
+	}
 }
