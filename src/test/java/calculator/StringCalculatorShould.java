@@ -7,7 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringCalculatorShould {
 
 	StringCalculator stringcalculator = new StringCalculator();
-
+    
+	@Test
+	public void returnSum() {
+		assertEquals(+1,stringcalculator.sum());
+	}
 	@Test
 	public void returnZeroOnEmptyString() {
 		assertEquals(0, stringcalculator.add(""));
