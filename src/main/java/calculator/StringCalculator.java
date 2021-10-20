@@ -118,9 +118,9 @@ class StringCalculator {
 		return count;
 	}
     
-    public static int sum()
+    public static int sum(String s)
     {
-    	String s= "+,1,2,3";
+    	
     	System.out.println(s);
     	
     	String[] strArray=s.split("");
@@ -134,9 +134,7 @@ class StringCalculator {
     			sum=sum+Integer.parseInt(strArray[i])+1;
     		}
     	}   
+		
 		return sum;
-    	
-    	
-    	
     }
 }
